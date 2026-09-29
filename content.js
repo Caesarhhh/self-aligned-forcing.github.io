@@ -4,11 +4,25 @@
  * Prompt start/end values are seconds and may be changed for actual switch times.
  */
 window.SDF_CONTENT = {
-  authors: [{ name: 'Authors to be announced', url: '', affiliation: '' }],
-  affiliations: 'Affiliations to be added',
+  authors: [
+    { name: 'Weiqiang Wang', url: '', affiliation: '1,*' },
+    { name: 'Zhuokun Chen', url: '', affiliation: '1,*' },
+    { name: 'Yusheng Dai', url: '', affiliation: '1' },
+    { name: 'Boying Li', url: '', affiliation: '1' },
+    { name: 'Yi Zhang', url: '', affiliation: '2,†' },
+    { name: 'Hossein Rahmani', url: '', affiliation: '3' },
+    { name: 'Qiuhong Ke', url: '', affiliation: '1,†' },
+    { name: 'Jianfei Cai', url: '', affiliation: '1' }
+  ],
+  affiliations: [
+    { id: '1', name: 'Monash University' },
+    { id: '2', name: 'Vivix AI' },
+    { id: '3', name: 'Lancaster University' }
+  ],
+  authorNotes: '* Equal contribution · † Corresponding authors',
   links: { Paper: '', Code: '', Models: '' },
   tldr: 'Self-Aligned Forcing trains all blocks in parallel with differentiable, stage-aligned noisy history, enabling faster training and multi-GPU pipelined inference for streaming video generation.',
-  bibtex: '@misc{selfalignedforcing,\n  title = {Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History},\n  author = {To be added},\n  note = {Manuscript; publication details to be added}\n}',
+  bibtex: '@misc{selfalignedforcing,\n  title = {Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History},\n  author = {Wang, Weiqiang and Chen, Zhuokun and Dai, Yusheng and Li, Boying and Zhang, Yi and Rahmani, Hossein and Ke, Qiuhong and Cai, Jianfei},\n  note = {Manuscript; publication details to be added}\n}',
   long: [], interactive: []
 };
 const media = (label, ours = false) => ({ label, ours, fps: ours && label.includes('Single KV') ? 22.9 : ours && label.includes('Multiple KV') ? 49.1 : 'XXX', src: '', poster: '' });

@@ -30,7 +30,8 @@ const displayDuration = section => section === 'long' ? 100 : 60;
 const formatTime = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 const content = window.SDF_CONTENT;
 $('#authors').innerHTML = content.authors.map(a => `${a.url ? `<a href="${escapeHTML(a.url)}" target="_blank" rel="noopener">` : '<span>'}${escapeHTML(a.name)}${a.affiliation ? `<sup>${escapeHTML(a.affiliation)}</sup>` : ''}${a.url ? '</a>' : '</span>'}`).join('');
-$('#affiliations').textContent = content.affiliations;
+$('#affiliations').innerHTML = content.affiliations.map(a => `<span><sup>${escapeHTML(a.id)}</sup> ${escapeHTML(a.name)}</span>`).join('');
+$('#author-notes').textContent = content.authorNotes;
 $('#tldr-text').textContent = content.tldr;
 $('#citation').textContent = content.bibtex;
 $('#paper-links').innerHTML = Object.entries(content.links).map(([label, url]) => {
