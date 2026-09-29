@@ -22,7 +22,7 @@ window.SDF_CONTENT = {
   authorNotes: '* Equal contribution · † Corresponding authors',
   links: { Paper: '', Code: '', Models: '' },
   tldr: 'Self-Aligned Forcing trains all blocks in parallel with differentiable, stage-aligned noisy history, enabling faster training and multi-GPU pipelined inference for streaming video generation.',
-  bibtex: '@misc{selfalignedforcing,\n  title = {Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History},\n  author = {Wang, Weiqiang and Chen, Zhuokun and Dai, Yusheng and Li, Boying and Zhang, Yi and Rahmani, Hossein and Ke, Qiuhong and Cai, Jianfei},\n  note = {Manuscript; publication details to be added}\n}',
+  bibtex: '@article{selfalignedforcing,\n  title = {Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History},\n  author = {Wang, Weiqiang and Chen, Zhuokun and Dai, Yusheng and Li, Boying and Zhang, Yi and Rahmani, Hossein and Ke, Qiuhong and Cai, Jianfei},\n  journal = {arXiv preprint},\n  year = {2026}\n}',
   long: [], interactive: []
 };
 const media = (label, ours = false) => ({ label, ours, fps: ours && label.includes('Single KV') ? 22.9 : ours && label.includes('Multiple KV') ? 49.1 : 'XXX', src: '', poster: '' });
