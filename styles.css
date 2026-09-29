@@ -260,4 +260,4 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{o
 .authors > span,.authors > a{white-space:nowrap}
 .affiliations{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;margin-bottom:6px}
 .affiliations > span{white-space:nowrap}
-.hero .author-notes{margin:0 0 23px;font-size:13px;color:var(--muted);text-align:center;hyphens:none}
+#author-notes{margin:0 0 23px;font-size:13px;color:var(--muted);text-align:center;hyphens:none}
